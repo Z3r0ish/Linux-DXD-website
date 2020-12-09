@@ -49,7 +49,8 @@
 body {
     margin: 0;
     font-family: 'Noto Sans';
-    background-image: url(../images/wallpaper.jpg);
+    background-color: #000;
+    color: #FFF
 }
 
 pre, code { font-family: Hack, monospace; }
@@ -62,6 +63,7 @@ pre, code { font-family: Hack, monospace; }
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px) !important;
     position: fixed;
+    z-index: 100;
 }
 
 .nav > .nav-header {
@@ -84,8 +86,8 @@ pre, code { font-family: Hack, monospace; }
     right: 25px;
     top: 50%;
     transform: translateY(-50%);
-            overflow-y: hidden;
-        overflow-x: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .nav > .nav-links > a {
@@ -155,16 +157,18 @@ pre, code { font-family: Hack, monospace; }
 /** First Section **/
 
 .intro {
-    /** background-color: ivory;**/
     height: 100vh;
+    -webkit-fill-available;
+    background-image: url("../images/wallpaper.jpg");
 }
 
 .intro-flexbox {
     display: flex;
-    flex-wrap: wrap;
-    height: calc(100% - 100px);
+    flex-flow: wrap;
+    height: calc(100vh - 100px);
     padding: 30px;
     padding-right: 10px;
+
 }
 
 .kitty {
@@ -172,11 +176,67 @@ pre, code { font-family: Hack, monospace; }
     backdrop-filter: blur(10px);
     padding: 25px;
     color: #FFF;
-    border-radius: 8px;
-    min-height: 100%;
 }
 
 .window {
     margin-right: 20px;
+    margin-top: 10px;
     flex: 1 0 auto;
+    border-radius: 8px;
+    width: min-content;
+}
+
+.v-split {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 100px);
+    padding-right: 10px;
+    margin-top: 0;
+    margin-right: 0px;
+    height: 100%;
+    flex: 0 1 auto;
+    min-width: 500px;
+
+}
+
+.home-image {
+    background-image: url("../images/screenshots/screenshot-12-8-2020.png");
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;    
+}
+
+.img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+@media (max-width:855px) {
+    .v-split {
+        margin-right: none;
+        height: calc(100% - 10%);
+        padding-right: 0px; 
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+
+    .window {
+       flex: initial; 
+       margin-right: 0px;
+       width: -webkit-fill-available;
+       width: -moz-available;
+    }
+
+    .intro-flexbox {
+        padding: 30px;
+    }
 }

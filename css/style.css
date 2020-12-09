@@ -211,6 +211,10 @@ pre {
     word-wrap: break-word;    
 }
 
+.figlet {
+    white-space: pre;
+}
+
 .img {
     width: 100%;
     height: 50%;
@@ -223,14 +227,16 @@ pre {
 @media (max-width:855px) {
     .v-split {
         margin-right: none;
-        height: calc(100% - 10%);
+        height: inherit;
         padding-right: 0px; 
         width: -webkit-fill-available;
         width: -moz-available;
+        min-width: 0px;
+        height: initial;
     }
 
     .window {
-       flex: initial; 
+       flex: none; 
        margin-right: 0px;
        width: -webkit-fill-available;
        width: -moz-available;
@@ -238,7 +244,13 @@ pre {
 
     .intro-flexbox {
         padding: 30px;
+        height: calc(100vh - 150px);
     }
+
+    .figlet {
+        font-size: calc(calc(100vw - 100px) / 45);
+    }
+    
 }
 
 img {

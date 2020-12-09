@@ -114,6 +114,10 @@ pre, code { font-family: Hack, monospace; }
     height: 100vh;
     width: -webkit-fill-available; 
     background-attachment:fixed;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 .background-right {
@@ -201,7 +205,7 @@ img {
 }
 /* Features */
 .features {
-    background-image: url("../images/logo.png");
+    background-image: url("../images/asia_argento.png");
 }
 /* Screenshots */
 .screenshots {
@@ -210,10 +214,6 @@ img {
 /* Downloads */
 .downloads {
     background-image: url("../images/group.png");
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
 }
 
 

@@ -109,6 +109,154 @@ pre, code { font-family: Hack, monospace; }
     display: none;
 }
   
+/* Sections */
+.segment {
+    height: 100vh;
+    width: -webkit-fill-available; 
+    background-attachment:fixed;
+}
+
+.background-right {
+    background-position: right;
+}
+
+.background-left {
+    background-position: left;
+}
+
+.kitty {
+    background-color: rgba(1,1,1,0.3);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    color: #FFF;
+}
+
+.window {
+    margin-right: 20px;
+    margin-top: 10px;
+    flex: 1 0 auto;
+    border-radius: 8px;
+    width: min-content;
+}
+
+.v-split {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 100px);
+    padding-right: 10px;
+    margin-top: 0;
+    margin-right: 0px;
+    height: 100%;
+    flex: 0 1 auto;
+    min-width: 500px;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;    
+}
+
+.figlet {
+    white-space: pre;
+}
+
+/* Home Page */
+
+.home {
+    background-image: url("../images/rias_gremory.jpg");
+}
+
+.home-flexbox {
+    display: flex;
+    flex-flow: wrap;
+    height: calc(100vh - 100px);
+    padding: 30px;
+    padding-right: 10px;
+}
+
+.home-image {
+    background-image: url("../images/screenshots/screenshot-12-8-2020.png");
+}
+
+.img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+img {
+    max-width:100%;
+}
+
+/* About */
+.about {
+    background-image: url("../images/xenovia_quarta.jpg");
+}
+/* Features */
+.features {
+    background-image: url("../images/logo.png");
+}
+/* Screenshots */
+.screenshots {
+    background-image: url("../images/akeno_himejima.png");
+}
+/* Downloads */
+.downloads {
+    background-image: url("../images/group.png");
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+/* responive code */
+
+@media (max-width:875px) {
+    .v-split {
+        margin-right: none;
+        height: inherit;
+        padding-right: 0px; 
+        width: -webkit-fill-available;
+        width: -moz-available;
+        min-width: 0px;
+        height: initial;
+    }
+
+    .window {
+       flex: none; 
+       margin-right: 0px;
+       width: -webkit-fill-available;
+       width: -moz-available;
+    }
+
+    .kitty {
+        height: fit-content;
+    }
+
+    .img {
+        height: 100%;
+    }
+
+    .home-flexbox {
+        padding: 30px;
+        padding-top: 10px;
+        height: auto;
+    }
+
+    .figlet {
+        font-size: calc(calc(100vw - 100px) / 30);
+    }
+    
+}
+
 @media (max-width:700px) {
     .nav > .nav-btn {
         display: block;
@@ -156,118 +304,3 @@ pre, code { font-family: Hack, monospace; }
         height: calc(100vh - 100px);
     }
 }
-
-/* Sections */
-.segment {
-    height: 100vh;
-    width: -webkit-fill-available; 
-    background-attachment:fixed;
-}
-
-.kitty {
-    background-color: rgba(1,1,1,0.3);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    color: #FFF;
-}
-
-.window {
-    margin-right: 20px;
-    margin-top: 10px;
-    flex: 1 0 auto;
-    border-radius: 8px;
-    width: min-content;
-}
-
-.v-split {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 100px);
-    padding-right: 10px;
-    margin-top: 0;
-    margin-right: 0px;
-    height: 100%;
-    flex: 0 1 auto;
-    min-width: 500px;
-}
-
-pre {
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;    
-}
-
-.figlet {
-    white-space: pre;
-}
-
-/* Home Page */
-
-.intro {
-    background-image: url("../images/wallpaper.jpg");
-}
-
-.intro-flexbox {
-    display: flex;
-    flex-flow: wrap;
-    height: calc(100vh - 100px);
-    padding: 30px;
-    padding-right: 10px;
-}
-
-.home-image {
-    background-image: url("../images/screenshots/screenshot-12-8-2020.png");
-}
-
-.img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-@media (max-width:855px) {
-    .v-split {
-        margin-right: none;
-        height: inherit;
-        padding-right: 0px; 
-        width: -webkit-fill-available;
-        width: -moz-available;
-        min-width: 0px;
-        height: initial;
-    }
-
-    .window {
-       flex: none; 
-       margin-right: 0px;
-       width: -webkit-fill-available;
-       width: -moz-available;
-    }
-
-    .intro-flexbox {
-        padding: 30px;
-        padding-top: 10px;
-        height: calc(100vh - 200px);
-    }
-
-    .figlet {
-        font-size: calc(calc(100vw - 100px) / 30);
-    }
-    
-}
-
-img {
-    max-width:100%;
-}
-
-/* About */
-
-/* Features */
-
-/* Screenshots */
-
-/* Downloads */

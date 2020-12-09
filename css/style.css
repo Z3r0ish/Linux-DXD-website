@@ -45,12 +45,15 @@
 #support:checked ~ .no-support {
     display: none;
 }
-  
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans';
     background-color: #000;
-    color: #FFF
+    color: #FFF;
 }
 
 pre, code { font-family: Hack, monospace; }
@@ -154,21 +157,11 @@ pre, code { font-family: Hack, monospace; }
     }
 }
 
-/** First Section **/
-
-.intro {
+/* Sections */
+.segment {
     height: 100vh;
-    -webkit-fill-available;
-    background-image: url("../images/wallpaper.jpg");
+    width: -webkit-fill-available; 
     background-attachment:fixed;
-}
-
-.intro-flexbox {
-    display: flex;
-    flex-flow: wrap;
-    height: calc(100vh - 100px);
-    padding: 30px;
-    padding-right: 10px;
 }
 
 .kitty {
@@ -196,11 +189,6 @@ pre, code { font-family: Hack, monospace; }
     height: 100%;
     flex: 0 1 auto;
     min-width: 500px;
-
-}
-
-.home-image {
-    background-image: url("../images/screenshots/screenshot-12-8-2020.png");
 }
 
 pre {
@@ -213,6 +201,24 @@ pre {
 
 .figlet {
     white-space: pre;
+}
+
+/* Home Page */
+
+.intro {
+    background-image: url("../images/wallpaper.jpg");
+}
+
+.intro-flexbox {
+    display: flex;
+    flex-flow: wrap;
+    height: calc(100vh - 100px);
+    padding: 30px;
+    padding-right: 10px;
+}
+
+.home-image {
+    background-image: url("../images/screenshots/screenshot-12-8-2020.png");
 }
 
 .img {
@@ -244,7 +250,8 @@ pre {
 
     .intro-flexbox {
         padding: 30px;
-        height: calc(100vh - 150px);
+        padding-top: 10px;
+        height: calc(100vh - 200px);
     }
 
     .figlet {
@@ -256,4 +263,11 @@ pre {
 img {
     max-width:100%;
 }
-    
+
+/* About */
+
+/* Features */
+
+/* Screenshots */
+
+/* Downloads */

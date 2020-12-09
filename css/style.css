@@ -160,6 +160,7 @@ pre, code { font-family: Hack, monospace; }
     height: 100vh;
     -webkit-fill-available;
     background-image: url("../images/wallpaper.jpg");
+    background-attachment:fixed;
 }
 
 .intro-flexbox {
@@ -168,7 +169,6 @@ pre, code { font-family: Hack, monospace; }
     height: calc(100vh - 100px);
     padding: 30px;
     padding-right: 10px;
-
 }
 
 .kitty {
@@ -248,12 +248,12 @@ pre {
     }
 
     .figlet {
-        font-size: calc(calc(100vw - 100px) / 45);
+        font-size: calc(calc(100vw - 100px) / 30);
     }
     
 }
 
 img {
     max-width:100%;
-    }
+}
     

@@ -34,7 +34,11 @@
     <link rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
-
+    <script>
+        var el = document.createElement('h2');
+        el.textContent = window.innerWidth;
+        document.body.appendChild(el);
+        </script>
     <!--Facebook meta data-->
     <meta property="og:description" content="Linux DXD homepage">
     <meta property="og:image" content="images/logo.png">

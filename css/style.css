@@ -56,6 +56,10 @@ body {
     color: #FFF;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+  }
+
 pre, code { font-family: Hack, monospace; }
 
 
@@ -176,7 +180,7 @@ pre {
 .home-flexbox {
     display: flex;
     flex-flow: wrap;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     padding: 30px;
     padding-right: 10px;
 }
@@ -203,6 +207,15 @@ img {
 .about {
     background-image: url("../images/xenovia_quarta.jpg");
 }
+
+.about-flexbox {
+    display: flex;
+    flex-flow: wrap;
+    height: calc(100vh - 200px);
+    padding: 30px;
+    padding-right: 10px;
+}
+
 /* Features */
 .features {
     background-image: url("../images/asia_argento.png");
